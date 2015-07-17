@@ -1,0 +1,29 @@
+{
+  "name": "AngularJS_Form_Postal_Websocket",
+  "version": "0.0.0",
+  "authors": [
+    "Anh Huy <anhhh.11@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.0",
+    "angular": "~1.4.3",
+    "postal.js": "~1.0.6",
+    "ui-router": "~0.2.15",
+    "lodash": "~3.10.0",
+    "ui-select": "*",
+    "bootstrap": "~3.3.5",
+    "ramda": "~0.16.0",
+    "angular-sanitize": "~1.4.3"
+  },
+  "devDependencies": {
+    "ng-prettyjson": "~0.1.8"
+  }
+}

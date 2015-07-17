@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html ng-cloak ng-app="A11TemplateV1">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="bower_components/angular/angular-csp.css" rel="stylesheet" />
+    <link href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="bower_components/select2/select2.css" rel="stylesheet" />
+    <link href="bower_components/ng-prettyjson/dist/ng-prettyjson.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form name="login" novalidate>
+        <div class="row">
+            <div class="col-md-6">
+                <pre>{{login | jsonCherry:['$error']}}</pre>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="text" value="" placeholder="Username" required ng-model="username" class="form-control" name="username" />
+                    <span class="label label-danger" ng-show="login.username.$error.required">Username is required</span>
+                    <pre>{{login.username | jsonCherry }}</pre>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" value="" placeholder="Password" required ng-model="password" class="form-control" name="password" />
+                    <span class="label label-danger" ng-show="login.password.$error.required">Password is required</span>
+                    <pre>{{login.password | jsonCherry }}</pre>
+                </div>
+                <div class="form-group">
+                    <span class="label label-danger" ng-show="login.$invalid">Please check all fields above</span>
+                    <input type="submit" value="login" class="btn btn-lg" ng-disabled="login.$invalid" />
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/ramda/dist/ramda.js"></script>
+    <script src="bower_components/postal.js/lib/postal.js"></script>
+    <script src="bower_components/select2/select2.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ui-select/src/select3.js"></script>
+    <script src="bower_components/angular-ui-validate/dist/validate.js"></script>
+    <script src="bower_components/ng-prettyjson/dist/ng-prettyjson.min.js"></script>
+    <script src="bower_components/ramda-fantasy/dist/ramda-fantasy.js"></script>
+    <script src="app/js/app.js"></script>
+</body>
+<style>
+    .pretty-json {
+        height: 500px;
+    }
+</style>
+</html>
+
