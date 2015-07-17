@@ -21,7 +21,8 @@
     "ui-select": "*",
     "bootstrap": "~3.3.5",
     "ramda": "~0.16.0",
-    "angular-sanitize": "~1.4.3"
+    "angular-sanitize": "~1.4.3",
+    "angular-loading-bar": "~0.8.0"
   },
   "devDependencies": {
     "ng-prettyjson": "~0.1.8"

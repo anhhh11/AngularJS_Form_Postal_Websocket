@@ -9,11 +9,33 @@
     <link href="bower_components/select2/select2.css" rel="stylesheet" />
     <link href="bower_components/angular-loading-bar/build/loading-bar.css" rel="stylesheet" />
 </head>
-<body ng-controller="MainCtrl">
-    <try-postal></try-postal>
-    <div ng-controller="tp.PostalPostCtrl">
-        <input type="" value="" ng-model="data.x" />
+<body>
+    <form name="login" novalidate ng-controller="MainCtrl">
+        {{data.x}}
+        <input ng-model="data.x" />
+        <div class="row">
+            <div class="col-md-6">
+                <!--<pre>{{login | jsonCherry:['$error']}}</pre>-->
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="text" value="" placeholder="Username" ng-model="username" class="form-control" name="username" validation="min_len:3|max_len:8|required" />
+                </div>
+
+                <div class="form-group">
+                    <input type="password" value="" placeholder="Password" ng-model="password" class="form-control" name="password" validation="min_len:2|max_len:50|required" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="login" class="btn btn-lg" ng-click="submit()" ng-disabled="login.$invalid"/>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div ng-controller="SecondCtrl">
+        {{data.x}}
+        <input ng-model="data.x" />
     </div>
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
     <script src="bower_components/ramda/dist/ramda.js"></script>
@@ -29,10 +51,7 @@
     <script src="bower_components/angular-translate/angular-translate.min.js"></script>
     <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
     <script src="bower_components/ramda-fantasy/dist/ramda-fantasy.js"></script>
-    <script src="app/js/config.js"></script>
-    <script src="app/js/globalLib.js"></script>
     <script src="app/js/app.js"></script>
-    <script src="app/demoJs/tryPostal.js"></script>
 </body>
 </html>
 
