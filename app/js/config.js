@@ -1,6 +1,6 @@
 ﻿(function (angular) {
     var app = angular.module('A11TemplateV1Config', ['ghiscoding.validation', 'pascalprecht.translate', 'ngSanitize',
-                                                'angular-loading-bar']);
+                                                'angular-loading-bar','toaster','ngAnimate']);
     //Config i18n
     app.config(function ($translateProvider) {
         $translateProvider.useStaticFilesLoader({
